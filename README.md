@@ -1,70 +1,77 @@
-# Getting Started with Create React App
+# Todo App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a simple Todo App built with React and Redux, using Redux Toolkit for state management and React-Bootstrap for styling. You can add, remove, and update the status of your todo items. 
 
-## Available Scripts
+[Live Demo](https://todo-assignment-kappa.vercel.app/)
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- Add new todo items
+- Mark todo items as done
+- Remove todo items
+- Responsive and user-friendly interface
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Screenshots
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+![Screenshot 1](./public/screenshots/React-App.png)
 
-### `npm test`
+## Installation
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+To get started with the project, follow these steps:
 
-### `npm run build`
+1. **Clone the repository:**
+    ```bash
+    git clone https://github.com/your-username/todo-app.git
+    cd todo-app
+    ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. **Install dependencies:**
+    ```bash
+    npm install
+    ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+3. **Start the development server:**
+    ```bash
+    npm start
+    ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Folder Structure
 
-### `npm run eject`
+- `src/`
+  - `components/`
+    - `App.js` - The main component that renders the todo app.
+    - `FormAdd.js` - Component for adding new todos.
+    - `TodoItem.js` - Component for displaying each todo item.
+  - `redux/`
+    - `slice/`
+      - `todo.js` - Contains the todo slice with reducers for adding, removing, and updating todos.
+    - `store.js` - Configures the Redux store.
+  - `index.js` - Entry point of the application.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Setting Up Redux
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+To set up Redux in this project:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+1. **Create a slice:** This slice will handle the state and actions for your todos. It includes actions to add, remove, and update the status of todo items.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+2. **Configure the store:** Create a store that combines your slices. This store will manage the global state of your application.
 
-## Learn More
+3. **Provide the store:** In your `index.js` file, wrap your app with the `Provider` component from `react-redux` and pass the store to it. This makes the Redux store available to your entire app.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Components
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- **App.js:** The main component that renders the entire todo app, including the form to add todos and the list of todo items.
+- **FormAdd.js:** A form component that allows users to add new todo items. It handles the form submission and dispatches the action to add a new todo.
+- **TodoItem.js:** A component that displays individual todo items. It includes buttons to mark todos as done and to remove them.
 
-### Code Splitting
+## Running the App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Once you have cloned the repository and installed the dependencies, you can start the development server. This will open the app in your default web browser, and you can start adding, removing, and updating todo items.
 
-### Analyzing the Bundle Size
+## Contributing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Feel free to submit issues or pull requests if you have any improvements or bug fixes.
 
-### Making a Progressive Web App
+## License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is licensed under the MIT License.
