@@ -38,7 +38,6 @@ To get started with the project, follow these steps:
 ## Folder Structure
 
 - `src/`
-  - `components/`
     - `App.js` - The main component that renders the todo app.
     - `FormAdd.js` - Component for adding new todos.
     - `TodoItem.js` - Component for displaying each todo item.
