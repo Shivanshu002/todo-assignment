@@ -15,9 +15,15 @@ const todoSlice = createSlice({
             state.list = state.list.map(todo =>
                 todo.id === action.payload.id ? { ...todo, isDone: true, updatedAt } : todo
             );
+        },
+        updateTodo: (state, action) => {
+            const { id, name } = action.payload;
+            state.list = state.list.map(todo =>
+                todo.id === id ? { ...todo, name } : todo
+            );
         }
     }
 });
 
-export const { addTodo, removeTodo, updateStatus } = todoSlice.actions;
+export const { addTodo, removeTodo, updateStatus, updateTodo } = todoSlice.actions;
 export default todoSlice.reducer;
