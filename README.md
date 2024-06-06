@@ -9,6 +9,7 @@ This is a simple Todo App built with React and Redux, using Redux Toolkit for st
 - Add new todo items
 - Mark todo items as done
 - Remove todo items
+- Edit task
 - Responsive and user-friendly interface
 
 ## Screenshots
